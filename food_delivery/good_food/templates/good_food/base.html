@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/icons.png' %}" type="image/x-icon" />
+  <!-- Icon - font-awesome -->
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+
+  <title>Правильное питание | Готовая здоровая еда с доставкой на дом</title>
+</head>
+
+<body>
+<div class="wrap">
+
+{% include 'good_food/navbar.html' %}
+
+{% block content %}{% endblock %}
+
+</div>
+</body>
+
+</html>
