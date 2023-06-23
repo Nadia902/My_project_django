@@ -1,23 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body{
-    font-family: 'Roboto', 'sans-serif';
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .wrap{
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box
+  box-sizing: border-box;
+  max-width: 1110px;
+  padding-left: 55px;
+  padding-right: 55px;
+  min-width: 414px;
+  margin: 0 auto;
 }
 
 .header {
-  position: sticky;
+  width: 100%;
+  position: fixed;
+  background-color: white;
   z-index: 111;
-  padding: 1.5rem 0;
+  padding: 0.5rem 0;
+  -webkit-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
+  box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
 }
 
-.header > .container {
+.wrap > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,5 +36,98 @@ body{
   display: inline-flex;
   align-items: center;
   list-style: none;
-  gap: 6.5rem;
+  gap: 2.0rem;
 }
+
+.login {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.3rem;
+  color: black;
+  font-weight:bold;
+}
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+  text-decoration: none;
+  color: black;
+  font-weight:bold;
+}
+
+.header__menu {
+    color: black;
+    font-weight:bold;
+}
+
+.back {
+  background-image: url('../images/back1.jpg');
+  background-size: cover;
+  background-position: center center;
+  padding: 200px 0 160px;
+}
+.heading {
+    font-family: 'Kanit', sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 1.1em;
+}
+.heading2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 22px;
+    line-height: 1.0em;
+}
+.btn {
+    color: #1b8d0c;
+    border: 2px solid #1b8d0c;
+    border-radius: 50px;
+    padding: 12px 20px;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+    font-weight: bold;
+ }
+
+ .subbtn {
+  padding-left: 100px;
+  padding-top: 20px;
+ }
+ .advant {
+    border: 1px solid #dcdfe8;
+    padding: 28px 20px 20px;
+    transition: all .4s;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 12px;
+    letter-spacing: .01em;
+    font-family: sans-serif;
+    margin-right: 10px;
+ }
+ .center {
+     padding: 80px 42px 0 0px;
+     display: block;
+     box-sizing: inherit;
+ }
+ .type {
+     margin-bottom: 48px;
+     text-align: center;
+     font-size: 32px;
+ }
+ .icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+ }
+ .boxing {
+    display: grid;
+    grid-gap: 28px;
+    grid-template-columns: repeat(4,1fr);
+ }
+

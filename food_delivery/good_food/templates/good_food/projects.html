@@ -1,6 +1,31 @@
 {% extends 'good_food/base.html' %}
 {% block content %}
   <!-- Main Section -->
-  <main class="projects">
-  </main>
+<div class="back">
+  <div class="wrap">
+    <h1 class="heading">Хотите правильно <br>питаться, но <br>некогда готовить?</h1>
+    <p class="heading2">Худеете, следите за фигурой или занимаетесь спортом, <br>но совсем нет времени
+      на приготовление еды? <br>Оставьте заявку прямо сейчас и получите готовый <br>рацион
+      здорового питания на целый день!</p>
+    <div class="subbtn">
+      <a href="#">
+        <button class="btn">Подобрать программу питания</button>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="center">
+    <h1 class="type">Здоровое питание от Good Food</h1>
+    <div class="boxing">
+      {% for profile in profiles %}
+      <div class="advant">
+        <img class="icon" src="{{ profile.icon_image.url }}">
+        <p><b>{{ profile.title }}</b></p>
+        <p>{{ profile.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock %}

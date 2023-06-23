@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import BeFit
 
 
 def projects(request):
-    return render(request, 'good_food/projects.html')
+    prof = BeFit.objects.all()
+    context = {'profiles': prof}
+    return render(request, 'good_food/projects.html', context)
