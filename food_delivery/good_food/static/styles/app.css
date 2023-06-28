@@ -109,9 +109,10 @@ a {
     letter-spacing: .01em;
     font-family: sans-serif;
     margin-right: 10px;
+    text-align: center;
  }
  .center {
-     padding: 80px 42px 0 0px;
+     padding: 80px 0px 0 0px;
      display: block;
      box-sizing: inherit;
  }
@@ -124,10 +125,48 @@ a {
     width: 80px;
     height: 80px;
     min-width: 80px;
+    }
+ .icon_text {
+    text-align: center;
  }
  .boxing {
     display: grid;
     grid-gap: 28px;
     grid-template-columns: repeat(4,1fr);
  }
-
+.about_us {
+     display: flex;
+}
+.about_image {
+    width: 550px;
+    height: 600px;
+    float:left
+    }
+.eat_text{
+    text-align: justify;
+}
+.good {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.list {
+    padding: 0px;
+    text-align: start;
+}
+.eat_image {
+    margin-right: 25px;
+}
+.back_two {
+    margin-top: 120px;
+    background-image: url('../images/calculator2.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0 200px;
+}
+.text {
+    padding: 0px;
+    margin: 0px;
+}
