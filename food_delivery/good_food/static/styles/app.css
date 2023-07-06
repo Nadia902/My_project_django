@@ -178,7 +178,6 @@ a {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 
 }
 .form-group {
@@ -255,3 +254,107 @@ form {
     font-family: inherit;
     box-sizing: border-box;
 }
+
+
+.program-group-wrap {
+    border-bottom: 1px solid #dcdfe8;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    }
+div {
+    display: block;
+}
+.program-group.active {
+    visibility: visible;
+    opacity: 1;
+    left: initial;
+    position: relative;
+}
+.program-group__el-val {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    grid-column-gap: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    padding: 8.5px 10px 4.5px 10px;
+}
+.program-group {
+    display: flex;
+    left: -9999px;
+    position: absolute;
+}
+.program-group__el.active {
+    border-bottom: 3px solid #7eca1d;
+}
+.program-group__el {
+    min-width: 192px;
+    padding: 15px;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all .4s;
+}
+.f {
+    display: flex;
+}
+.f, .icon-row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.g-afc {
+    grid-auto-flow: column;
+}
+.g {
+    display: grid;
+}
+.g-gap-8 {
+    grid-gap: 8px;
+}
+.schedule-list__el.active {
+    background: #7eca1d;
+    color: #fff;
+}
+.bor {
+    border-width: 1px;
+}
+.br-8 {
+    border-radius: 8px;
+}
+.bor, .bor-b, .bor-t {
+    border-style: solid;
+}
+.bor--border {
+    border-color: #dcdfe8;
+}
+.f-column {
+    flex-direction: column;
+}
+.f-aic {
+    align-items: center;
+}
+.f-aic, .f-mid {
+    -webkit-align-items: center;
+}
+.psh-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.psv-16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.blog-el__title, .coach-descr__title, .coach-descr__val, .coach-history__title, .invite-title, .review-item__name, .type--w700 {
+    font-weight: 700;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.blog-el-footer, .drop-menu-card__text, .drop-menu__el-title, .dropdown-title, .invite-msg span, .program-coast__title, .program-consist__el-type, .program-el__head, .program-el__text, .rating--msg, .ration__info, .review-item__footer, .type--sm {
+    font-size: 12px;
+}
+
