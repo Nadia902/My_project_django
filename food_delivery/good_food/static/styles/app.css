@@ -295,6 +295,7 @@ div {
     white-space: nowrap;
     border-bottom: 3px solid transparent;
     transition: all .4s;
+    cursor: pointer;
 }
 .f {
     display: flex;
@@ -315,7 +316,7 @@ div {
 .g-gap-8 {
     grid-gap: 8px;
 }
-.schedule-list__el.active {
+.schedule-list__el.active_two {
     background: #7eca1d;
     color: #fff;
 }
@@ -333,6 +334,7 @@ div {
 }
 .f-column {
     flex-direction: column;
+    cursor: pointer;
 }
 .f-aic {
     align-items: center;
@@ -358,3 +360,39 @@ div {
     font-size: 12px;
 }
 
+.eat {
+    margin-top: 120px;
+    background-image: url('../images/fon.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0 200px;
+}
+ .icon2 {
+    width: 280px;
+    height: 180px;
+    }
+
+ .food_collection {
+    border: 1px solid #dcdfe8;
+    transition: all .4s;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    background: #fff;
+    border-radius: 12px;
+    letter-spacing: .01em;
+    font-family: sans-serif;
+    margin-right: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 300px;
+    margin-bottom: 15px;
+ }
+ .eat_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+ }

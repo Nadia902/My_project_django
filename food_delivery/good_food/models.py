@@ -8,3 +8,48 @@ class BeFit(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Light(models.Model):
+    week = models.CharField(max_length=50)
+    icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+
+class Normal(models.Model):
+    week = models.CharField(max_length=50)
+    icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+
+class Strong(models.Model):
+    week = models.CharField(max_length=50)
+    icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+
+class SuperStrong(models.Model):
+    week = models.CharField(max_length=50)
+    icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+
+class Super(models.Model):
+    week = models.CharField(max_length=50)
+    icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title

@@ -3,60 +3,59 @@
         <div class="main-cont actionProgramsList js-main-page-block-menu">
             <div class="program-group js-tab-cont js-tick-cont active" data-programtype="weightLoss">
                 <div class="program-group__el js-tick actionSelectProgram active">
-                    <div class="program-group__el-val">900 - 1100 Ккал</div>
+                    <div class="program-group__el-val">1100 - 1500 Ккал</div>
                 </div>
                 <div class="program-group__el js-tick actionSelectProgram">
-                    <div class="program-group__el-val">1100 - 1300 Ккал</div>
+                    <div class="program-group__el-val">1500 - 2000 Ккал</div>
                 </div>
                 <div class="program-group__el js-tick actionSelectProgram">
-                    <div class="program-group__el-val">1300 - 1600 Ккал</div>
+                    <div class="program-group__el-val">2000 - 2500 Ккал</div>
                 </div>
                 <div class="program-group__el js-tick actionSelectProgram">
-                    <div class="program-group__el-val">1600 - 2000 Ккал</div>
+                    <div class="program-group__el-val">2500 - 3200 Ккал</div>
                 </div>
-                <div class="program-group__el js-tick actionSelectProgram">
-                    <div class="program-group__el-val">2000 - 2400 Ккал</div>
-                </div>
-            </div>
-            <div class="program-group__el js-tick actionSelectProgram ">
-                <div class="program-group__el-val">2400 - 3200 Ккал</div>
             </div>
         </div>
     </div>
-
-
     <div class="f f-between mb-40 fw gap-20 lg__f-column">
         <div class="js-tick-cont mr-a lg__mr-init lg__w100" data-test="dayList">
             <div class="schedule-list g g-afc g-gap-8">
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select   active" data-day="1" data-week="2">
+                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select   active_two" data-day="1" data-week="2">
                     <div class="type--w700 mb-5">Пн</div>
-                    <div class="type--sm">03.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="2" data-week="2">
                     <div class="type--w700 mb-5">Вт</div>
-                    <div class="type--sm">04.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="3" data-week="2">
                     <div class="type--w700 mb-5">Ср</div>
-                    <div class="type--sm">05.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="4" data-week="2">
                     <div class="type--w700 mb-5">Чт</div>
-                    <div class="type--sm">06.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="5" data-week="2">
                     <div class="type--w700 mb-5">Пт</div>
-                    <div class="type--sm">07.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="6" data-week="2">
                     <div class="type--w700 mb-5">Сб</div>
-                    <div class="type--sm">08.07</div>
                 </div>
                 <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="7" data-week="2">
                     <div class="type--w700 mb-5">Вс</div>
-                    <div class="type--sm">09.07</div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="eat">
+    <div class="wrap">
+        <div class="eat_flex">
+            {% for lightes in prof_light %}
+                {% if lightes.week == "Понедельник" %}
+                <div class="food_collection">
+                    <p class="icon_text2"><img class="icon2" src="{{ lightes.icon_image.url }}"></p>
+                    <p><b>{{ lightes.title }}</b></p>
+                </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </div>
