@@ -11,6 +11,7 @@ class BeFit(models.Model):
 
 
 class Light(models.Model):
+    description = models.CharField(max_length=50, default=0)
     week = models.CharField(max_length=50)
     icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
     title = models.CharField(max_length=200)
@@ -20,6 +21,7 @@ class Light(models.Model):
 
 
 class Normal(models.Model):
+    description = models.CharField(max_length=50, default=0)
     week = models.CharField(max_length=50)
     icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
     title = models.CharField(max_length=200)
@@ -29,6 +31,7 @@ class Normal(models.Model):
 
 
 class Strong(models.Model):
+    description = models.CharField(max_length=50, default=0)
     week = models.CharField(max_length=50)
     icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
     title = models.CharField(max_length=200)
@@ -38,6 +41,7 @@ class Strong(models.Model):
 
 
 class SuperStrong(models.Model):
+    description = models.CharField(max_length=50, default=0)
     week = models.CharField(max_length=50)
     icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
     title = models.CharField(max_length=200)
@@ -47,6 +51,7 @@ class SuperStrong(models.Model):
 
 
 class Super(models.Model):
+    description = models.CharField(max_length=50, default=0)
     week = models.CharField(max_length=50)
     icon_image = models.ImageField(blank=True, null=True, upload_to='projects/%Y/%m/%d/')
     title = models.CharField(max_length=200)

@@ -47,15 +47,58 @@
 </div>
 <div class="eat">
     <div class="wrap">
-        <div class="eat_flex">
-            {% for lightes in prof_light %}
-                {% if lightes.week == "Понедельник" %}
-                <div class="food_collection">
-                    <p class="icon_text2"><img class="icon2" src="{{ lightes.icon_image.url }}"></p>
-                    <p><b>{{ lightes.title }}</b></p>
-                </div>
-                {% endif %}
-            {% endfor %}
+        <div class="text_about">
+            <p class="text_result">Результат достигается за счет высокого содержания белков,
+                оптимального количества полезных жиров и меньшего количества углеводов
+                (причем углеводы присутствуют в основном в первой половине дня). Общий
+                калораж рассчитывается индивидуально.</p>
+            <div class="eat_flex">
+                {% for lightes in prof_light %}
+                    {% if lightes.week == "Понедельник" %}
+                    <div class="food_collection">
+                        <h5 class="productitem-title">{{ lightes.description }}</h5>
+                        <p class="icon_text2"><img class="icon2" src="{{ lightes.icon_image.url }}"></p>
+                        <p><b>{{ lightes.title }}</b></p>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="row align-items-center cbfix">
+                    <div class="col-sm-7 col-md-8 col-lg-6 col-block">
+                        <div class="program-total__info fz20 align-items-center xs-up-1 sm-up-1 md-up-2">
+                            <div class="col col-block order-md-1">
+                                <p>Ваше кол-во калорий: <b><span id="programCal">800</span>ккал</b></p>
+                            </div>
+                            <div class="col col-block order-md-2">
+                                <div class="d-flex align-items-center">
+                                    <span class="mr-2 mr-sm-3 spn-info">Кол-во дней:</span>
+                                    <select class="custom-select w-auto font-weight-bold" name="programdays"
+                                            id="programdays">
+                                        <option value="1" selected="" data-id="1d">1 день</option>
+                                        <option value="7" data-id="7d">7 дней</option>
+                                        <option value="21" data-id="21d">21 дней</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-md-4 col-lg-3 text-center col-block">
+                        <div class="program-total__price fz20">Цена: <span class="text-primary font-weight-bold h1 mb-0 big">
+                            <span id="programTotal">990</span>₽</span>
+                            <span>/день</span>
+                        </div>
+                        <div class="col-lg-3 text-center col-block">
+                        <form action="" method="GET" data-rel="tolightcase">
+                            <button type="submit" class="btn btn-secondary">Заказать рацион</button>
+                            <input type="hidden" name="product_id" id="program_product_id" value="18"><!--id-->
+                            <input type="hidden" name="nazv" id="program_nazv" value="800-1100"><!--cals-->
+                            <input type="hidden" name="sqm" id="program_sqm" value="1"><!--days-->
+                            <input type="hidden" name="price" id="program_price" value="990"><!--price-->
+                            <input type="hidden" name="vip" id="program_vip" value=""><!--vip-->
+                        </form>
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 </div>

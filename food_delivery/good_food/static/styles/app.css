@@ -361,11 +361,10 @@ div {
 }
 
 .eat {
-    margin-top: 120px;
     background-image: url('../images/fon.jpg');
     background-size: cover;
     background-position: center center;
-    padding: 100px 0 200px;
+    padding: 10px 0 200px;
 }
  .icon2 {
     width: 280px;
@@ -394,5 +393,26 @@ div {
     justify-content: center;
     flex-wrap: wrap;
     align-items: stretch;
-
+ }
+ .text_result{
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+ }
+ .productitem-title{
+    margin: 12px;
+    font-weight: 700!important;
+    text-align: center!important;
+    font-size: 1.25rem;
+ }
+ .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+ }
+ .col-sm-5 {
+    padding-top: 21px;
+    margin-left: 35px;
  }
