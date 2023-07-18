@@ -2,17 +2,20 @@
     <div class="program-group-wrap">
         <div class="main-cont actionProgramsList js-main-page-block-menu">
             <div class="program-group js-tab-cont js-tick-cont active" data-programtype="weightLoss">
-                <div class="program-group__el js-tick actionSelectProgram active">
+                <div onclick="light()" class="program-group__el round light js-tick actionSelectProgram active">
                     <div class="program-group__el-val">1100 - 1500 Ккал</div>
                 </div>
-                <div class="program-group__el js-tick actionSelectProgram">
+                <div onclick="normal()" class="program-group__el round normal js-tick actionSelectProgram">
                     <div class="program-group__el-val">1500 - 2000 Ккал</div>
                 </div>
-                <div class="program-group__el js-tick actionSelectProgram">
+                <div onclick="strong()" class="program-group__el round strong js-tick actionSelectProgram">
                     <div class="program-group__el-val">2000 - 2500 Ккал</div>
                 </div>
-                <div class="program-group__el js-tick actionSelectProgram">
+                <div onclick="superstrong()" class="program-group__el round superstrong js-tick actionSelectProgram">
                     <div class="program-group__el-val">2500 - 3200 Ккал</div>
+                </div>
+                <div onclick="super1()" class="program-group__el super round js-tick actionSelectProgram">
+                    <div class="program-group__el-val">3200 - 3600 Ккал</div>
                 </div>
             </div>
         </div>
@@ -20,25 +23,25 @@
     <div class="f f-between mb-40 fw gap-20 lg__f-column">
         <div class="js-tick-cont mr-a lg__mr-init lg__w100" data-test="dayList">
             <div class="schedule-list g g-afc g-gap-8">
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select   active_two" data-day="1" data-week="2">
+                <div onclick="monday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select active_two" data-day="1" data-week="2">
                     <div class="type--w700 mb-5">Пн</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="2" data-week="2">
+                <div onclick="tuesday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="2" data-week="2">
                     <div class="type--w700 mb-5">Вт</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="3" data-week="2">
+                <div onclick="wednesday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="3" data-week="2">
                     <div class="type--w700 mb-5">Ср</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="4" data-week="2">
+                <div onclick="thursday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="4" data-week="2">
                     <div class="type--w700 mb-5">Чт</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="5" data-week="2">
+                <div onclick="friday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="5" data-week="2">
                     <div class="type--w700 mb-5">Пт</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="6" data-week="2">
+                <div onclick="saturday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="6" data-week="2">
                     <div class="type--w700 mb-5">Сб</div>
                 </div>
-                <div class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="7" data-week="2">
+                <div onclick="sunday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="7" data-week="2">
                     <div class="type--w700 mb-5">Вс</div>
                 </div>
             </div>
@@ -52,42 +55,56 @@
                 оптимального количества полезных жиров и меньшего количества углеводов
                 (причем углеводы присутствуют в основном в первой половине дня). Общий
                 калораж рассчитывается индивидуально.</p>
-            <div class="eat_flex">
+            <div class="eat_flex lightx">
                 {% for lightes in prof_light %}
-                    {% if lightes.week == "Понедельник" %}
-                    <div class="food_collection">
-                        <h5 class="productitem-title">{{ lightes.description }}</h5>
-                        <p class="icon_text2"><img class="icon2" src="{{ lightes.icon_image.url }}"></p>
-                        <p><b>{{ lightes.title }}</b></p>
-                    </div>
-                    {% endif %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex normalx eatnone2">
+                {% for lightes in prof_normal %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex strongx eatnone2">
+                {% for lightes in prof_strong %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex superstrongx eatnone2">
+                {% for lightes in prof_superstrong %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex superx eatnone2">
+                {% for lightes in prof_super %}
+                {% include 'good_food/eat.html' %}
                 {% endfor %}
             </div>
             <div class="row align-items-center cbfix">
-                    <div class="col-sm-7 col-md-8 col-lg-6 col-block">
-                        <div class="program-total__info fz20 align-items-center xs-up-1 sm-up-1 md-up-2">
-                            <div class="col col-block order-md-1">
-                                <p>Ваше кол-во калорий: <b><span id="programCal">800</span>ккал</b></p>
-                            </div>
-                            <div class="col col-block order-md-2">
-                                <div class="d-flex align-items-center">
-                                    <span class="mr-2 mr-sm-3 spn-info">Кол-во дней:</span>
-                                    <select class="custom-select w-auto font-weight-bold" name="programdays"
+                <div class="col-sm-7 col-md-8 col-lg-6 col-block">
+                    <div class="program-total__info fz20 align-items-center xs-up-1 sm-up-1 md-up-2">
+                        <div class="col col-block order-md-1">
+                            <p>Ваше кол-во калорий: <b><span id="programCal">{{ control }}</span>ккал</b></p>
+                        </div>
+                        <div class="col col-block order-md-2">
+                            <div class="d-flex align-items-center">
+                                <span class="mr-2 mr-sm-3 spn-info">Кол-во дней:</span>
+                                <select class="custom-select2 w-auto font-weight-bold" name="programdays"
                                             id="programdays">
-                                        <option value="1" selected="" data-id="1d">1 день</option>
-                                        <option value="7" data-id="7d">7 дней</option>
-                                        <option value="21" data-id="21d">21 дней</option>
-                                    </select>
-                                </div>
+                                    <option value="1" selected="" data-id="1d">1 день</option>
+                                    <option value="7" data-id="7d">7 дней</option>
+                                    <option value="21" data-id="21d">21 дней</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5 col-md-4 col-lg-3 text-center col-block">
-                        <div class="program-total__price fz20">Цена: <span class="text-primary font-weight-bold h1 mb-0 big">
-                            <span id="programTotal">990</span>₽</span>
-                            <span>/день</span>
-                        </div>
-                        <div class="col-lg-3 text-center col-block">
+                </div>
+                <div class="col-sm-5 col-md-4 col-lg-3 text-center col-block">
+                    <div class="program-total__price fz20">&nbsp;Цена: <span class="text-primary font-weight-bold h1 mb-0 big">
+                        <span id="programTotal">990</span>₽</span>
+                        <span>/день</span>
+                    </div>
+                    <div class="col-lg-3 text-center col-block">
                         <form action="" method="GET" data-rel="tolightcase">
                             <button type="submit" class="btn btn-secondary">Заказать рацион</button>
                             <input type="hidden" name="product_id" id="program_product_id" value="18"><!--id-->
@@ -96,8 +113,8 @@
                             <input type="hidden" name="price" id="program_price" value="990"><!--price-->
                             <input type="hidden" name="vip" id="program_vip" value=""><!--vip-->
                         </form>
-                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
