@@ -1,5 +1,7 @@
 let slides = document.querySelectorAll(".round");
 let eat = document.querySelectorAll(".eat_flex");
+let prices = document.querySelector("#programTotal");
+
 
 function clear(){
     for(let i = 0; i < slides.length; i++) {
@@ -26,6 +28,7 @@ function light(){
     for(let j = 0; j < li.length; j++) {
         li[j].classList.remove('eatnone2')
     }
+    prices.textContent = 850;
 }
 
 function normal(){
@@ -36,6 +39,7 @@ function normal(){
     for(let j = 0; j < no.length; j++) {
         no[j].classList.remove('eatnone2')
     }
+    prices.textContent = 990;
 }
 
 function strong(){
@@ -46,6 +50,7 @@ function strong(){
     for(let j = 0; j < st.length; j++) {
         st[j].classList.remove('eatnone2')
     }
+    prices.textContent = 1050;
 }
 
 function superstrong(){
@@ -56,6 +61,7 @@ function superstrong(){
     for(let j = 0; j < su.length; j++) {
         su[j].classList.remove('eatnone2')
     }
+    prices.textContent = 1200;
 }
 
 function super1(){
@@ -66,6 +72,7 @@ function super1(){
     for(let j = 0; j < sup.length; j++) {
         sup[j].classList.remove('eatnone2')
     }
+    prices.textContent = 1350;
 }
 
 let food = document.querySelectorAll(".foodflex");

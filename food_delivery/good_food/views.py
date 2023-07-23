@@ -27,4 +27,5 @@ def projects(request):
     context = {'profiles': prof, 'control': control, 'prof_light': prof_light,
                'prof_normal': prof_normal, 'prof_strong': prof_strong,
                'prof_superstrong': prof_superstrong, 'prof_super': prof_super}
+
     return render(request, 'good_food/projects.html', context)

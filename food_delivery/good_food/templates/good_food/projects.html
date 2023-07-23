@@ -9,7 +9,7 @@
       на приготовление еды? <br>Оставьте заявку прямо сейчас и получите готовый <br>рацион
       здорового питания на целый день!</p>
     <div class="subbtn">
-      <a href="#">
+      <a href="#programm">
         <button class="btn">Подобрать программу питания</button>
       </a>
     </div>
@@ -55,7 +55,7 @@
         <li>разнообразной (наше меню постоянно обновляется, готовится по
           рецептам лучших мишленовских ресторанов).</li>
       </ul>
-      <p>Хранить пищу рекомендуется в холодильнике в упаковке от Good Food,
+      <p id="programm">Хранить пищу рекомендуется в холодильнике в упаковке от Good Food,
         которую можно использовать для разогрева блюда в микроволновой печи.
         Подписка на заказы с доставкой предусматривает возможность заморозить
         определенное количество дней по каждой программе в зависимости от
@@ -65,5 +65,59 @@
 </div>
 {% include 'good_food/calculator.html' %}
 {% include 'good_food/menu.html' %}
+<section id="map">
+  <div class="map">
+    <img src="{% static 'images/map.png' %}" class="map-img">
+  </div>
+  <div class="map-bull-box">
+    <div class="container">
+      <div class="map-bull-item" id="bx_719294866_29">
+        <h3 class="map-bull-title">Зоны доставки<br> на карте города</h3>
+        <div class="wrapper_map_bull_text">
+          <p class="map-bull-text" style="height:auto;">Зеленым цветом отмечена
+              зона бесплатной доставки. В радиусе 20 км от зеленой зоны действует
+              платная доставка, стоимость уточняйте у оператора .</p>
+        </div>
+      </div>
+      <div class="map-bull-item" id="bx_719294866_30">
+	    <h3 class="map-bull-title">Мы доставляем ваш заказ ежедневно<br> с 18:00 до 00:00</h3>
+        <div class="wrapper_map_bull_text">
+	      <p class="map-bull-text" style="height:auto;">У вас есть возможность:<br></p>
+          <ul class="list_oly">
+            <li>Выбрать удобное время доставки;</li>
+            <li>Изменить адрес доставки, указанный ранее, до 18:00;</li>
+            <li>Отменить заказ до 12:00.</li>
+          </ul>
+	    </div>
+      </div>
+      <div class="map-bull-item" id="bx_719294866_31">
+	    <h3 class="map-bull-title">Вы можете оплатить заказ любым удобным способом</h3>
+        <div class="wrapper_map_bull_text">
+	      <p class="map-bull-text" style="height:auto;">Мы принимаем к оплате банковские карты,
+            наличные, а также возможна оплата по счету.<br><br></p>
+	    </div>
+      </div>
+	</div>
+  </div>
+</section>
+<div class="wrap">
+  <div class="footer">
+    <div class="footer-1 col-md-4 col-xs-12">
+      <p>г. Тула пр.Ленина д. 44</p>
+    </div>
+    <div class="footer-2 col-md-4 col-xs-12">
+      <p><a href="tel:+74872587000" class="footer-phone" onclick="ga('send', 'event', 'form', 'klik_phone_footer'); ym(56433427, 'reachGoal', 'klik_phone_footer'); return true;">
+        +7 (4872) 587-000</a></p>
+    </div>
+    <div class="footer-3 col-md-4 col-xs-12">
+      <p>
+        <a href="mailto:zakaz@goodfood.ru" onclick="ga('send', 'event', 'form', 'klik_mail_footer'); ym(56433427, 'reachGoal', 'klik_mail_footer'); return true;">zakaz@goodfood.ru</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-ps col-xs-12 col-xs-12">
+      ©2017 Good Food - Здоровое питание с доставкой по Туле</div>
+</div>
+
 {% endblock %}
 
