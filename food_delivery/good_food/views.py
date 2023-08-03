@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import BeFit, Light, Normal, Strong, SuperStrong, Super
+from .models import Order
+from ..telebot.sendmessage import send_telegram
 
 
 def projects(request):
@@ -29,3 +31,15 @@ def projects(request):
                'prof_superstrong': prof_superstrong, 'prof_super': prof_super}
 
     return render(request, 'good_food/projects.html', context)
+
+
+def thanks_page(request):
+    if request.POST:
+        name = request.POST['name']
+        phone = request.POST['phone']
+        element = Order(order_name=name, order_phone=phone)
+        element.save()
+        send_telegram(tg_name=name, tg_phone=phone)
+        return render(request, 'good_food/thanks.html', {'name': name})
+    else:
+        return render(request, 'good_food/thanks.html')

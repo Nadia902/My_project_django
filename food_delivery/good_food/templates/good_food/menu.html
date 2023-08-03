@@ -104,17 +104,42 @@
                         <span id="programTotal">850</span>₽</span>
                         <span>/день</span>
                     </div>
-                    <div class="col-lg-3 text-center col-block">
-                        <form action="" method="GET" data-rel="tolightcase">
-                            <button type="submit" class="btn btn-secondary">Заказать рацион</button>
-                            <input type="hidden" name="product_id" id="program_product_id" value="18"><!--id-->
-                            <input type="hidden" name="nazv" id="program_nazv" value="800-1100"><!--cals-->
-                            <input type="hidden" name="sqm" id="program_sqm" value="1"><!--days-->
-                            <input type="hidden" name="price" id="program_price" value="990"><!--price-->
-                            <input type="hidden" name="vip" id="program_vip" value=""><!--vip-->
-                        </form>
-                    </div>
+<!--                    <div class="col-lg-3 text-center col-block">-->
+<!--                        <form action="" method="GET" data-rel="tolightcase">-->
+<!--                            <button type="submit" class="btn btn-secondary">Заказать рацион</button>-->
+<!--                            <input type="hidden" name="product_id" id="program_product_id" value="18">&lt;!&ndash;id&ndash;&gt;-->
+<!--                            <input type="hidden" name="nazv" id="program_nazv" value="800-1100">&lt;!&ndash;cals&ndash;&gt;-->
+<!--                            <input type="hidden" name="sqm" id="program_sqm" value="1">&lt;!&ndash;days&ndash;&gt;-->
+<!--                            <input type="hidden" name="price" id="program_price" value="990">&lt;!&ndash;price&ndash;&gt;-->
+<!--                            <input type="hidden" name="vip" id="program_vip" value="">&lt;!&ndash;vip&ndash;&gt;-->
+<!--                        </form>-->
+<!--                    </div>-->
                 </div>
+                <section>
+                    <div class="container class_form">
+                        <h1 class="text-3">Оставь заявку и получи услугу</h1>
+                        <div class="row justify-content-center">
+                        <form action="{% url 'thanks_page' %}" method="POST" style="width: 50%;">
+                            {% csrf_token %}
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Имя</label><br>
+                              {{ form.name }}
+                            <div class="">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Телефон</label><br>
+                              {{ form.phone }}
+                            <div class="">
+                            </div>
+                          </div>
+                          <div style="float: right;" class="form-group row">
+                              <button type="submit" class="btn btn-success">ОСТАВИТЬ ЗАЯВКУ</button>
+                          </div>
+                        </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
