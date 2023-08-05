@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'good_food.apps.GoodFoodConfig',
-    'telebot.apps.TelebotConfig',
+    'crm.apps.CrmConfig',
 ]
 
 MIDDLEWARE = [

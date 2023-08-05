@@ -3,7 +3,8 @@
     <h1 class="good text" id="calculator_text">Выберите свою программу питания:</h1>
     <div class="calc-form">
       <div class="col-block">
-        <form action="{% url 'projects' %}" id="calcform" name="calcform" method="GET">
+        <form action="{% url 'projects' %}" id="calcform" name="calcform" method="POST">
+          {% csrf_token %}
           <div class="rows">
             <div class="col-block_one">
               <div class="col-block">
