@@ -1,0 +1,40 @@
+{% extends 'good_food/base.html' %}
+{% load static %}
+{% block comm %}
+    <header class="header">
+        <div class="wrap">
+          <div class="container">
+            <a href="{% url 'projects' %}" class="header__logo">
+              <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
+            </a>
+          </div>
+        </div>
+    </header>
+    <div class="commentType">
+        <div class="wrapnew">
+            <div class="containerType">
+                <h1> Отзывы клиентов</h1>
+                <p>Отзывы реальных клиентов о доставке готовых рационов питания на неделю,
+                вкусе самой еды, ее качестве и сервисе компании Good Food. Узнай почему у
+                нас так вкусно!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section--gradient">
+        <div class="wrap">
+            <div class="center"><h1> Отзывы о доставке готовой еды</h1></div>
+                <div class="review-item" id="bx_651765591_363235"></div>
+                <div class="review-item__name">Анастасия</div>
+                <div class="review-item__info">
+                Здравствуйте, спасибо Вам за ваш сервис, готовить не люблю и лень
+                    заморачиваться, Вы очень помогаете. Много блюд нравится и то что
+                    всегда свежее и овощи не разваренные - это супер.
+                Пробовала у Вас еще программу вегги, но так как там исключаются и
+                    молочные и яйца - это жестковато, было бы круто иметь программу
+                    без мяса, но с другой животной продукцией)</div>
+                <div class="review-item__footer"></div>
+                <div class="review-item__date">19 июля 2021</div>
+        </div>
+    </div>
+
+{% endblock %}

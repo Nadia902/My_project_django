@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import BeFit, Light, Normal, Strong, SuperStrong, Super
 from crm.forms import OrderForm
+from crm.models import Order
+from telebot.sendmessage import send_telegram
+# from .forms import ReviewForm
+# from django.contrib import messages
 
 
 def projects(request):
@@ -38,3 +42,34 @@ def new_order(request):
 
     return render(request, 'good_food/neworder.html', contexts)
 
+
+def thanks_page(request):
+    if request.POST:
+        name = request.POST['name']
+        phone = request.POST['phone']
+        element = Order(order_name=name, order_phone=phone)
+        element.save()
+        send_telegram(tg_name=name, tg_phone=phone)
+        return render(request, 'good_food/thanks.html', {'name': name})
+    else:
+        return render(request, 'good_food/thanks.html')
+
+
+def project(request):
+    return render(request, 'good_food/comments.html')
+
+# def project(request):
+#     form = ReviewForm()
+#
+#     if request.method == 'POST':
+#         form = ReviewForm(request.POST)
+#         review = form.save(commit=False)
+#         review.owner = request.user.profile
+#         review.save()
+#
+#         messages.success(request, 'Ваш отзыв был успешно отправлен!')
+#         return redirect('project')
+#
+#     return render(request, 'good_food/comments.html', {
+#         'form': form
+#     })

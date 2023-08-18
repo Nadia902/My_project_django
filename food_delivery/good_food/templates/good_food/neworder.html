@@ -14,7 +14,7 @@
   		<div class="container class_form">
   			<h1 class="text-3">Оставь заявку для заказа рациона питания</h1>
   			<div class="row justify-content-center">
-  			<form action="" method="POST" style="width: 50%;">
+  			<form action="{% url 'thanks_page' %}" method="POST" style="width: 50%;">
                 {% csrf_token %}
 			  <div class="form-group row">
 			    <label for="inputEmail3" class="col-sm-2 col-form-label">Имя</label><br>

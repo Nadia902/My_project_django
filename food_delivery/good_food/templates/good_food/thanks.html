@@ -1,9 +1,19 @@
+{% extends 'good_food/base.html' %}
+{% load static %}
 {% block thanks %}
-
+  <header class="header">
+    <div class="wrap">
+      <div class="container">
+        <a href="{% url 'projects' %}" class="header__logo">
+          <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
+        </a>
+      </div>
+    </div>
+  </header>
 	<!-- Спасибо -->
   	<section>
   		<div class="container">
-  			<div class="thank"><h1>! Спасибо за заявку!</h1></div>
+  			<div class="thank"><h1>{{ name }}! Спасибо за заявку!</h1></div>
   		</div>
   	</section>
   	<!-- Спасибо -->

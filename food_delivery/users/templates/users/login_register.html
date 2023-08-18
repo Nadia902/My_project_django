@@ -1,0 +1,90 @@
+{% extends 'good_food/base.html' %}
+{% load static %}
+{% block content %}
+
+
+{% if page == 'register' %}
+
+    <div class="auth">
+      <div class="card">
+        <div class="auth__header text-center">
+          <a href="/">
+            <img src="{% static 'images/logo.svg' %}" alt="icon" />
+          </a>
+          <h3>Зарегистрировать аккаунт</h3>
+          <p>Создайте новую учетную запись</p>
+        </div>
+
+        <form  action="{% url 'register' %}" method="post" class="form auth__form">
+            {% csrf_token %}
+
+            {% for field in form %}
+        <!-- Input:Text -->
+          <div class="form__field">
+            <label for="formInput#text">{{ field.label }}: </label>
+            {{ field }}
+          </div>
+            {% endfor %}
+
+
+          <div class="auth__actions">
+            <input class="btn btn--sub btn--lg" type="submit" value="Sign  In" />
+          </div>
+        </form>
+        <div class="auth__alternative">
+          <p>У вас уже есть аккаунт?</p>
+          <a href="{% url 'login' %}">Войти</a>
+        </div>
+      </div>
+    </div>
+
+{% else %}
+<div class="auth">
+    <div class="card">
+        <div class="auth__header text-center">
+          <a href="/">
+            <img src="{% static 'images/logo.svg' %}" alt="icon" />
+          </a>
+          <h3>Логин аккаунта</h3>
+          <p>Привет, с возвращением!</p>
+        </div>
+
+        <form action="{% url 'login' %}" method="post" class="form auth__form">
+            {% csrf_token %}
+          <!-- Input:Email -->
+          <div class="form__field">
+            <label for="formInput#text">Ник: </label>
+            <input
+              class="input input--text"
+              id="formInput#text"
+              type="text"
+              name="username"
+              placeholder="Enter your username..."
+            />
+          </div>
+
+          <!-- Input:Password -->
+          <div class="form__field">
+            <label for="formInput#password">Пароль: </label>
+            <input
+              class="input input--password"
+              id="formInput#passowrd"
+              type="password"
+              name="password"
+              placeholder="••••••••"
+            />
+          </div>
+          <div class="auth__actions">
+            <input class="btn btn--sub btn--lg" type="submit" value="Log In" />
+            <a href="forgetpassword.html">Забыли пароль?</a>
+          </div>
+        </form>
+        <div class="auth__alternative">
+          <p>Нет учетной записи?</p>
+          <a href="{% url 'register' %}">Зарегестрироваться</a>
+        </div>
+      </div>
+</div>
+{% endif %}
+
+{% endblock %}
