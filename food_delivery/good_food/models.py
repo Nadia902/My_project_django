@@ -99,14 +99,6 @@ class CommentCrm(models.Model):
         verbose_name_plural = 'Комментарии'
 
 
-class Post(models.Model):
-    title = models.CharField(max_length=250)
-    body = models.TextField()
-
-    def __str__(self):
-        return self.title
-
-
 # class Review(models.Model):   комментарии
 #     owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
 #     body = models.TextField(blank=True, null=True)

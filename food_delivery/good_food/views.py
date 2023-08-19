@@ -55,8 +55,7 @@ def thanks_page(request):
         return render(request, 'good_food/thanks.html')
 
 
-def project(request):
-    return render(request, 'good_food/comments.html')
+
 
 # def project(request):
 #     form = ReviewForm()

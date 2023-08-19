@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'crm.apps.CrmConfig',
     'telebot.apps.TelebotConfig',
     'users.apps.UsersConfig',
+    'user_comments.apps.UserCommentsConfig',
 ]
 
 MIDDLEWARE = [
