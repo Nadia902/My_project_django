@@ -4,8 +4,8 @@ from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
-# from .forms import CustomUserCreationForm, ProfileForm, MessageForm
-# from django.contrib.auth.decorators import login_required
+from .forms import CustomUserCreationForm
+from django.contrib.auth.decorators import login_required
 # from .utils import search_profiles, paginate_profiles
 
 
@@ -26,7 +26,7 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            return redirect('review')
+            return redirect('register')
         else:
             messages.error(request, "Имя пользователя или пароль некорректны")
 
@@ -52,7 +52,7 @@ def register_user(request):
 
             messages.success(request, 'Аккаунт пользователя создан!')
             login(request, user)
-            return redirect('review')
+            return redirect('projects')
         else:
             messages.error(request, "При регистрации произошла ошибка")
 

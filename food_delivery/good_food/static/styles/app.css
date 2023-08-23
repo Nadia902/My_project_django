@@ -852,11 +852,6 @@ div {
   margin: 3rem 0;
 }
 
-.comment {
-  display: flex;
-  gap: 2rem;
-}
-
 .comment:not(:last-child) {
   margin-bottom: 3rem;
 }

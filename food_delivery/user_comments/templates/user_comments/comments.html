@@ -23,6 +23,7 @@
     <div class="section--gradient">
         <div class="wrap">
             <div class="center">
+                <h1> Отзывы о доставке готовой еды</h1>
                 {% with comments.count as total_comments %}
                     <h2>
                         {{ total_comments }} comment{{ total_comments|pluralize }}
@@ -30,39 +31,28 @@
                 {% endwith %}
                 {% for comment in comments %}
                   <div class="comment">
-                    <p class="info">
-                      Comment {{ forloop.counter }} by {{ comment.name }}
-                      {{ comment.created }}
-                    </p>
-                  {{ comment.body|linebreaks }}
+                      <div class="review-item" id="bx_651765591_363235"></div>
+                      <div class="review-item__name">{{ comment.name }}</div>
+                      <div class="review-item__info">{{ comment.body|linebreaks }}</div>
+                      <div class="review-item__footer"></div>
+                      <div class="review-item__date">{{ comment.created|date:"d E Y H:i" }}</div>
                   </div>
                 {% empty %}
-                  <p>There are no comments yet.</p>
+                  <p>Пока нет комментариев.</p>
                 {% endfor %}
                 {% if new_comment %}
-                  <h2>Your comment has been added.</h2>
+                  <h2>Ваш комментарий был добавлен.</h2>
                 {% else %}
-                  <h2>Add a new comment</h2>
+                  <h2>Добавить новый комментарий</h2>
                   <form action="." method="post">
                     {{ comment_form.as_p }}
                     {% csrf_token %}
-                    <p><input type="submit" value="Add comment"></p>
+                    <p><input class="btn btn&#45;&#45;sub btn&#45;&#45;lg" type="submit" value="Добавить"></p>
                   </form>
                 {% endif %}
-                <h1> Отзывы о доставке готовой еды</h1></div>
-                <div class="review-item" id="bx_651765591_363235"></div>
-                <div class="review-item__name">Анастасия</div>
-                <div class="review-item__info">
-                Здравствуйте, спасибо Вам за ваш сервис, готовить не люблю и лень
-                    заморачиваться, Вы очень помогаете. Много блюд нравится и то что
-                    всегда свежее и овощи не разваренные - это супер.
-                Пробовала у Вас еще программу вегги, но так как там исключаются и
-                    молочные и яйца - это жестковато, было бы круто иметь программу
-                    без мяса, но с другой животной продукцией)</div>
-                <div class="review-item__footer"></div>
-                <div class="review-item__date">19 июля 2021</div>
+                {% include 'good_food/pagination.html' %}
+            </div>
         </div>
     </div>
     {% endfor %}
-
 {% endblock %}
