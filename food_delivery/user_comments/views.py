@@ -9,7 +9,7 @@ def project(request):
     post = get_object_or_404(Post)
     posts = Post.objects.all()
     comments = Comment.objects.filter(active=True)  # Список активных комментариев к этой записи
-    paginator = Paginator(comments, 3)  # 5 постов на каждой странице
+    paginator = Paginator(comments, 3)  # 3 поста на каждой странице
     page = request.GET.get('page')
     new_comment = None
     if request.method == 'POST':  # Комментарий был опубликован

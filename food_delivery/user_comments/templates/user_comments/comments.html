@@ -29,7 +29,7 @@
                         {{ total_comments }} comment{{ total_comments|pluralize }}
                     </h2>
                 {% endwith %}
-                {% for comment in comments %}
+                {% for comment in pages %}
                   <div class="comment">
                       <div class="review-item" id="bx_651765591_363235"></div>
                       <div class="review-item__name">{{ comment.name }}</div>
@@ -43,14 +43,18 @@
                 {% if new_comment %}
                   <h2>Ваш комментарий был добавлен.</h2>
                 {% else %}
-                  <h2>Добавить новый комментарий</h2>
-                  <form action="." method="post">
-                    {{ comment_form.as_p }}
-                    {% csrf_token %}
-                    <p><input class="btn btn&#45;&#45;sub btn&#45;&#45;lg" type="submit" value="Добавить"></p>
-                  </form>
+                    {% if request.user.is_authenticated %}
+                      <h2>Добавить новый комментарий</h2>
+                      <form action="." method="post">
+                        {{ comment_form.as_p }}
+                        {% csrf_token %}
+                        <p><input class="btn btn&#45;&#45;sub btn&#45;&#45;lg" type="submit" value="Добавить"></p>
+                      </form>
+                    {% else %}
+                    <h2>Комментарии могут оставлять только зарегистрированные пользователи</h2>
+                    {% endif %}
                 {% endif %}
-                {% include 'good_food/pagination.html' %}
+                {% include 'good_food/pagination.html' with page=pages %}
             </div>
         </div>
     </div>
