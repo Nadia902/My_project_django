@@ -1,0 +1,15 @@
+{% load static %}
+
+<header class="header">
+  <div class="wrap">
+    <div class="container">
+      <a href="{% url 'projects' %}" class="header__logo">
+        <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
+      </a>
+      <a href="{% url 'projects' %}" class="login">
+        <img class="icon_back" src="{% static 'images/back.png' %}" alt="icon">
+        <div>Назад</div>
+      </a>
+    </div>
+  </div>
+</header>

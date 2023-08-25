@@ -2,15 +2,7 @@
 {% load static %}
 {% block comm %}
 
-    <header class="header">
-        <div class="wrap">
-          <div class="container">
-            <a href="{% url 'projects' %}" class="header__logo">
-              <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
-            </a>
-          </div>
-        </div>
-    </header>
+{% include 'good_food/navbar_back.html' %}
     {% for one_post in posts %}
     <div class="commentType">
         <div class="wrapnew">
@@ -51,7 +43,7 @@
                         <p><input class="btn btn&#45;&#45;sub btn&#45;&#45;lg" type="submit" value="Добавить"></p>
                       </form>
                     {% else %}
-                    <h2>Комментарии могут оставлять только зарегистрированные пользователи</h2>
+                    <h2 class="reg_coomments containerType_bootom">Комментарии могут оставлять только зарегистрированные пользователи</h2>
                     {% endif %}
                 {% endif %}
                 {% include 'good_food/pagination.html' with page=pages %}

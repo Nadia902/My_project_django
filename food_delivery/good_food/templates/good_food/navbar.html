@@ -14,9 +14,12 @@
             <li class="header__menuItem"><a href="{% url 'project' %}">Отзывы</a></li>
             <li class="header__menuItem"><a href="#bx_719294866_29">Доставка</a></li>
             {% if request.user.is_authenticated %}
-            <li class="header__menuItem"><a href="{% url 'logout' %}" class="login">
+            <li class="header__menuItem">
+              <a href="{% url 'logout' %}" class="login">
               <img src="{% static 'images/logout.png' %}" alt="icon">
-              <div>Выйти</div></a></li>
+              <div>Выйти</div>
+              </a>
+            </li>
             {% else %}
             <li class="header__menuItem"><a href="{% url 'login' %}" class="login">
               <img src="{% static 'images/login.png' %}" alt="icon">
@@ -25,15 +28,5 @@
           </ul>
         </nav>
       </div>
-      {% if messages %}
-        {% for message in messages %}
-        <div style="text-align: center">
-          <div class="alert alert--{{ message.tags }}">
-            <p class="alert__message">{{ message }}</p>
-            <button class="alert__close">x</button>
-          </div>
-        </div>
-        {% endfor %}
-      {% endif %}
     </div>
   </header>

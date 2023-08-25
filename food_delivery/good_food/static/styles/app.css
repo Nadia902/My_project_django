@@ -62,7 +62,7 @@ a {
 }
 
 .back {
-  background-image: url('../images/back1.jpg');
+  background-image: url('../images/back2.jpg');
   background-size: cover;
   background-position: center center;
   padding: 200px 0 160px;
@@ -636,7 +636,7 @@ div {
  .containerType{
     border-radius: 12px;
     overflow: hidden;
-    background: #fff;
+    background: #d6f5f4;
     padding: 25px;
     text-align: center;
  }
@@ -687,6 +687,7 @@ div {
 .review-item__info {
     margin-bottom: 16px;
     box-sizing: inherit;
+    text-align: justify;;
 }
 .review-item__footer {
     padding-top: 16px;
@@ -727,7 +728,7 @@ div {
 
 @media screen and (min-width: 650px) {
   .auth > .card {
-    padding: 5rem 8rem;
+    padding: 1rem 5rem;
     width: 95%;
     max-width: 65rem;
   }
@@ -863,5 +864,26 @@ div {
 .comment__info {
   font-size: 1.45rem;
 }
-
-
+ .icon_back {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    margin-right: 10px;
+    }
+.pagination{
+    margin-bottom: 35px;
+}
+.reg_coomments {
+    color: #1e988f;
+}
+ .containerType_bootom{
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+ }
+ .pointer_num{
+    font-size: 25px;
+    font-weight: bold;
+ }

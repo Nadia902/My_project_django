@@ -26,7 +26,7 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            return redirect('register')
+            return redirect('projects')
         else:
             messages.error(request, "Имя пользователя или пароль некорректны")
 

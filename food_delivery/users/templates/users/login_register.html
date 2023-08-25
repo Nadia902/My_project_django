@@ -1,13 +1,31 @@
-{% extends 'good_food/base.html' %}
+<!DOCTYPE html>
 {% load static %}
-{% block content %}
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'images/icons.png' %}" type="image/x-icon" />
+  <!-- Icon - font-awesome -->
+  <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
 
+  <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+  <title>Правильное питание | Готовая здоровая еда с доставкой на дом</title>
+</head>
+<body>
+
+{% include 'good_food/navbar_back.html' %}
 
 {% if page == 'register' %}
-
+<div class="login_content">
     <div class="auth">
       <div class="card">
-        <div class="auth__header text-center">
+        <div class="auth__header text-center auth__header_1">
           <a href="/">
             <img src="{% static 'images/logo.svg' %}" alt="icon" />
           </a>
@@ -28,7 +46,7 @@
 
 
           <div class="auth__actions">
-            <input class="btn btn--sub btn--lg" type="submit" value="Sign  In" />
+            <input class="btn btn--sub btn--lg" type="submit" value="Войти" />
           </div>
         </form>
         <div class="auth__alternative">
@@ -75,8 +93,7 @@
             />
           </div>
           <div class="auth__actions">
-            <input class="btn btn--sub btn--lg" type="submit" value="Log In" />
-            <a href="forgetpassword.html">Забыли пароль?</a>
+            <input class="btn btn--sub btn--lg" type="submit" value="Авторизоваться" />
           </div>
         </form>
         <div class="auth__alternative">
@@ -85,6 +102,5 @@
         </div>
       </div>
 </div>
+</div>
 {% endif %}
-
-{% endblock %}
