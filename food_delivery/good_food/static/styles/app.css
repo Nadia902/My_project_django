@@ -1,59 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
 }
 
 .wrap{
-  box-sizing: border-box;
-  max-width: 1110px;
-  padding-left: 55px;
-  padding-right: 55px;
-  min-width: 414px;
-  margin: 0 auto;
+      box-sizing: border-box;
+      max-width: 1110px;
+      padding-left: 55px;
+      padding-right: 55px;
+      min-width: 414px;
+      margin: 0 auto;
 }
 
+/*========== Меню ==========*/
+
 .header {
-  width: 100%;
-  position: fixed;
-  background-color: white;
-  z-index: 111;
-  padding: 0.5rem 0;
-  -webkit-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
-  box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
+      width: 100%;
+      position: fixed;
+      background-color: white;
+      z-index: 111;
+      padding: 0.5rem 0;
+      -webkit-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
+      -moz-box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
+      box-shadow: 2px 10px 36px -7px rgba(0,0,0,0.75);
 }
 
 .wrap > .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 }
 
 .header__nav > ul {
-  display: inline-flex;
-  align-items: center;
-  list-style: none;
-  gap: 2.0rem;
-}
-
-.login {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 0.3rem;
-  color: black;
-  font-weight:bold;
-}
-
-a:active, /* активная/посещенная ссылка */
-a:hover,  /* при наведении */
-a {
-  text-decoration: none;
-  color: black;
-  font-weight:bold;
+      display: inline-flex;
+      align-items: center;
+      list-style: none;
+      gap: 2.0rem;
 }
 
 .header__menu {
@@ -61,12 +46,41 @@ a {
     font-weight:bold;
 }
 
-.back {
-  background-image: url('../images/back2.jpg');
-  background-size: cover;
-  background-position: center center;
-  padding: 200px 0 160px;
+.login {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 0.3rem;
+      color: black;
+      font-weight:bold;
 }
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
+}
+
+/*========== Меню с кнопкой ==========*/
+
+.icon_back {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    margin-right: 10px;
+}
+
+/*========== Основная страница ==========*/
+
+.back {
+    background-image: url('../images/back2.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 200px 0 160px;
+}
+
 .heading {
     font-family: 'Kanit', sans-serif;
     font-size: 65px;
@@ -78,25 +92,54 @@ a {
     font-size: 22px;
     line-height: 1.0em;
 }
-.btn {
-    color: #1b8d0c;
-    border: 2px solid #1b8d0c;
-    border-radius: 50px;
-    padding: 12px 20px;
-    background-color: transparent;
-    overflow: hidden;
-    position: relative;
-    font-size: inherit;
-    line-height: inherit;
-    cursor: pointer;
-    font-weight: bold;
+
+.subbtn {
+    padding-left: 100px;
+    padding-top: 20px;
  }
 
- .subbtn {
-  padding-left: 100px;
-  padding-top: 20px;
- }
- .advant {
+.btn {
+    color: #fff;
+    background-color: #1e988f;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    padding: 0.35rem 1.425rem;
+    height: 40px;
+    border-color: #1e988f;
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.625rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.center {
+    padding: 80px 0px 0 0px;
+    display: block;
+    box-sizing: inherit;
+    text-align: center;
+}
+
+.type {
+    margin-bottom: 48px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.boxing {
+    display: grid;
+    grid-gap: 28px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.advant {
     border: 1px solid #dcdfe8;
     padding: 28px 20px 20px;
     transition: all .4s;
@@ -110,41 +153,18 @@ a {
     font-family: sans-serif;
     margin-right: 10px;
     text-align: center;
- }
- .center {
-     padding: 80px 0px 0 0px;
-     display: block;
-     box-sizing: inherit;
- }
- .type {
-     margin-bottom: 48px;
-     text-align: center;
-     font-size: 32px;
- }
- .icon {
+}
+
+.icon_text {
+    text-align: center;
+}
+
+.icon {
     width: 80px;
     height: 80px;
     min-width: 80px;
-    }
- .icon_text {
-    text-align: center;
- }
- .boxing {
-    display: grid;
-    grid-gap: 28px;
-    grid-template-columns: repeat(4,1fr);
- }
-.about_us {
-     display: flex;
 }
-.about_image {
-    width: 550px;
-    height: 600px;
-    float:left
-    }
-.eat_text{
-    text-align: justify;
-}
+
 .good {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
@@ -152,13 +172,117 @@ a {
     padding-top: 100px;
     padding-bottom: 20px;
 }
+
+.about_us {
+     display: flex;
+}
+
+.eat_image {
+    margin-right: 25px;
+}
+
+.about_image {
+    width: 550px;
+    height: 600px;
+    float:left
+}
+
+.eat_text{
+    text-align: justify;
+}
+
 .list {
     padding: 0px;
     text-align: start;
 }
-.eat_image {
-    margin-right: 25px;
+
+.map {
+    background-image: url('../images/map.png');
+    background-size: cover;
+    background-position: center center;
+    padding: 0px 0 0px;
 }
+
+.map-img {
+    width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.map-bull-box {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    z-index: 4;
+    box-sizing: border-box;
+    font-family: "PT Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    display: block;
+    padding-left: 350px;
+    padding-right: 350px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    width: 100%;
+}
+
+.map-bull-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 1%;
+    text-align: left;
+    background: #fff;
+    -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.15);
+    box-shadow: 0 4px 6px rgba(0,0,0,.15);
+    padding: 38px 25px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.map-bull-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #393C43;
+    height: 110px;
+    text-align: center;
+}
+
+.wrapper_map_bull_text {
+    min-height: 120px;
+}
+
+.footer {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #393C43;
+    text-align: center;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.footer-ps {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: .875rem;
+    color: #9B9486;
+}
+
+/*========== Калькулятор ==========*/
+
 .back_two {
     margin-top: 120px;
     background-image: url('../images/calculator2.jpg');
@@ -166,31 +290,36 @@ a {
     background-position: center center;
     padding: 100px 0 200px;
 }
+
 .text {
     padding: 0px;
     margin: 35px;
 }
+
 .calc-form{
     display: block;
 }
+
 .rows, .col-block_one {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-
 }
+
 .form-group {
     margin-bottom: 30px;
     padding-right: 15px;
     padding-left: 15px;
 }
+
 .fz20 {
     cursor: pointer;
     font-size: 1.25rem;
     display: inline-block;
     margin-bottom: 16px;
 }
+
 .custom-select {
     height: 2.875rem;
     font-size: 1.25rem;
@@ -207,6 +336,7 @@ a {
     word-wrap: normal;
     font-family: inherit;
 }
+
 .form-control {
     height: 2.875rem;
     padding: 0.5rem 1rem;
@@ -224,10 +354,7 @@ a {
     font-family: inherit;
     padding: 0 1.5rem 0 0.8rem;
 }
-form {
-    display: block;
-    margin-top: 0em;
-}
+
 .calc-form__info {
     position: relative;
     width: 100%;
@@ -235,55 +362,28 @@ form {
     margin: 0 auto;
     text-align: center!important;
 }
-.btn {
-    cursor: pointer;
-    padding: 0.35rem 1.425rem;
-    height: 40px;
-    color: #fff;
-    background-color: #1e988f;
-    border-color: #1e988f;
-    display: inline-block;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.625rem;
-    font-family: inherit;
-    box-sizing: border-box;
-}
+
+/*========= Наборы для заказа ==========*/
+
 .program-group-wrap {
     border-bottom: 1px solid #dcdfe8;
     margin-bottom: 32px;
     margin-top: 32px;
     }
-div {
-    display: block;
+
+.program-group {
+    display: flex;
+    left: -9999px;
+    position: absolute;
 }
+
 .program-group.active {
     visibility: visible;
     opacity: 1;
     left: initial;
     position: relative;
 }
-.program-group__el-val {
-    display: flex;
-    flex-wrap: wrap;
-    white-space: nowrap;
-    grid-column-gap: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    color: black;
-    font-weight: bold;
-    padding: 8.5px 10px 4.5px 10px;
-}
-.program-group {
-    display: flex;
-    left: -9999px;
-    position: absolute;
-}
+
 .program-group__el.active {
     border-bottom: 3px solid #7eca1d;
 }
@@ -295,6 +395,36 @@ div {
     transition: all .4s;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+div {
+    display: block;
+}
+
+.program-group__el-val {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    grid-column-gap: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    padding: 8.5px 10px 4.5px 10px;
+}
+
 .f {
     display: flex;
 }
@@ -443,39 +573,10 @@ div {
     display: inline-block;
     margin-bottom: 16px;
 }
-.map {
-    background-image: url('../images/map.png');
-    background-size: cover;
-    background-position: center center;
-    padding: 0px 0 0px;
-}
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: block;
-}
-.map-bull-item {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin: 0 1%;
-    text-align: left;
-    background: #fff;
-    -webkit-box-shadow: 0 4px 6px rgba(0,0,0,.15);
-    box-shadow: 0 4px 6px rgba(0,0,0,.15);
-    padding: 38px 25px;
-    box-sizing: border-box;
-    border-radius: 25px;
-}
-.map-bull-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #393C43;
-    height: 110px;
-    text-align: center;
-}
+
+
+
+
 #map {
     position: relative;
     height: 845px;
@@ -501,14 +602,8 @@ div {
     position: relative;
     overflow-y: hidden;
 }
-.map-img {
-    width: 100%;
-    vertical-align: middle;
-    border: 0;
-}
-.wrapper_map_bull_text {
-    min-height: 120px;
-}
+
+
 .map:after {
     content: '';
     display: block;
@@ -521,40 +616,7 @@ div {
     background: -webkit-linear-gradient(bottom,rgba(255,255,255,.96) 3%,
     rgba(255,255,255,.3) 88%,rgba(255,255,255,.96) 99%);
 }
-.map-bull-box {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    text-align: center;
-    z-index: 4;
-    box-sizing: border-box;
-    font-family: "PT Sans",sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    display: block;
-    padding-left: 350px;
-    padding-right: 350px;
-}
-.footer-ps {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: .875rem;
-    color: #9B9486;
-}
 
-.col-xs-12 {
-    width: 100%;
-}
-.footer {
-    display: flex;
-    margin-top: 60px;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #393C43;
-    text-align: center;
-}
 .telebot_order {
     padding-top: 300px;
 }
@@ -588,13 +650,7 @@ div {
 	height: calc(100vh - 162px);
 }
 /*разде*/
-.container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+
 .justify-content-center {
     justify-content: center!important;
 }
@@ -668,9 +724,7 @@ div {
     font-size: 20px;
     cursor: pointer;
 }
-.center {
-    text-align: center;
-}
+
 .section--gradient {
     background: linear-gradient(98.95deg,#e3eeff 0,#e4f6e4 52.6%,#ffeee4 100%);
     padding:10px;
@@ -864,12 +918,7 @@ div {
 .comment__info {
   font-size: 1.45rem;
 }
- .icon_back {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    margin-right: 10px;
-    }
+
 .pagination{
     margin-bottom: 35px;
 }

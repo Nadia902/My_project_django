@@ -2,34 +2,31 @@
   <div class="wrap">
     <h1 class="good text" id="calculator_text">Выберите свою программу питания:</h1>
     <div class="calc-form">
-      <div class="col-block">
+      <div>
         <form action="{% url 'projects' %}" id="calcform" name="calcform" method="POST">
           {% csrf_token %}
           <div class="rows">
             <div class="col-block_one">
-              <div class="col-block">
+              <div>
                 <div class="form-group">
                   <label class="fz20" for="calc_gender">Ваш пол</label>
-                  <select name="calc_gender" id="calc_gender" class="custom-select"
-                            autocomplete="off">
+                  <select name="calc_gender" id="calc_gender" class="custom-select" autocomplete="off">
                     <option value="1">Женский</option>
                     <option value="2">Мужской</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="fz20" for="calc_goal">Ваша цель</label>
-                  <select name="calc_goal" id="calc_goal" class="custom-select"
-                            autocomplete="off">
-                    <option value="-200" data-goalid="2">Похудение</option>
-                    <option value="-200" data-goalid="8">Сушка</option>
-                    <option value="0" data-goalid="9">Поддержание формы</option>
-                    <option value="200" data-goalid="10">Набор массы</option>
+                  <select name="calc_goal" id="calc_goal" class="custom-select" autocomplete="off">
+                    <option value="-200">Похудение</option>
+                    <option value="-200">Сушка</option>
+                    <option value="0">Поддержание формы</option>
+                    <option value="200">Набор массы</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label class="fz20" for="calc_act">Активность</label>
-                  <select name="calc_act" id="calc_act" class="custom-select"
-                          autocomplete="off">
+                  <select name="calc_act" id="calc_act" class="custom-select" autocomplete="off">
                     <option value="1.2">Cидячий образ жизни</option>
                     <option value="1.375">Незначительная активность</option>
                     <option value="1.55">Умеренные нагрузки 3-5 дней/нед.</option>
@@ -38,33 +35,24 @@
                   </select>
                 </div>
               </div>
-              <div class="col-block2">
+              <div>
                 <div class="form-group">
                   <label class="fz20" for="calc_age">Возраст</label>
-                  <input type="text" name="calc_age" id="calc_age" class="form-control"
-                             required="required" pattern="[0-9.]+">
+                  <input type="text" name="calc_age" id="calc_age" class="form-control" required="required" pattern="[0-9.]+">
                 </div>
                 <div class="form-group">
                   <label class="fz20" for="calc_height">Рост</label>
-                  <input type="text" name="calc_height" id="calc_height" class="form-control
-                      form-control-lg" required="required" pattern="[0-9.]+">
+                  <input type="text" name="calc_height" id="calc_height" class="form-control" required="required" pattern="[0-9.]+">
                 </div>
                 <div class="form-group mb-0">
                   <label class="fz20" for="calc_weight">Вес</label>
-                  <input type="text" name="calc_weight" id="calc_weight" class="form-control
-                      form-control-lg" required="required" pattern="[0-9.]+">
+                  <input type="text" name="calc_weight" id="calc_weight" class="form-control" required="required" pattern="[0-9.]+">
                 </div>
               </div>
-<!--            <div class="col-lg-8 col-block d-none calc-form__result">-->
-<!--              <p class="fz20">Ваш расчетный уровень потребления с учетом ваших параметров и-->
-<!--                уровня физической активности составляет-->
-<!--                <span class="text-primary h4 font-weight-bold l1 mb-0" id="totalbmr">000</span>-->
-<!--                ккал в день</p>-->
-<!--            </div>-->
             </div>
-            <div class="col-block_two">
-              <div class="calc-form__info text-lg-center">
-                <button class="btn btn-primary" type="submit">Рассчитать</button>
+            <div>
+              <div class="calc-form__info">
+                <button class="btn" type="submit">Рассчитать</button>
               </div>
             </div>
           </div>

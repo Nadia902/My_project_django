@@ -1,32 +1,35 @@
 {% load static %}
-<!-- Header Section -->
-  <header class="header">
-    <div class="wrap">
-      <div class="container">
-        <a href="{% url 'projects' %}" class="header__logo">
-          <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
-        </a>
-        <nav class="header__nav">
-          <ul class="header__menu">
-            <li class="header__menuItem"><a href='#result'>Меню</a></li>
-            <li class="header__menuItem"><a href="#calculator_text">Калькулятор</a></li>
-            <li class="header__menuItem"><a href="#about_good">О нас</a></li>
-            <li class="header__menuItem"><a href="{% url 'project' %}">Отзывы</a></li>
-            <li class="header__menuItem"><a href="#bx_719294866_29">Доставка</a></li>
+<!-- Меню -->
+<header class="header">
+  <div class="wrap">
+    <div class="container">
+      <a href="{% url 'projects' %}">
+        <img src="{% static 'images/goodfood.jpg' %}" alt="DevSearch Logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href='#result'>Меню</a></li>
+          <li><a href="#calculator_text">Калькулятор</a></li>
+          <li><a href="#about_good">О нас</a></li>
+          <li><a href="{% url 'project' %}">Отзывы</a></li>
+          <li><a href="#bx_719294866_29">Доставка</a></li>
             {% if request.user.is_authenticated %}
-            <li class="header__menuItem">
-              <a href="{% url 'logout' %}" class="login">
+          <li>
+            <a href="{% url 'logout' %}" class="login">
               <img src="{% static 'images/logout.png' %}" alt="icon">
               <div>Выйти</div>
-              </a>
-            </li>
+            </a>
+          </li>
             {% else %}
-            <li class="header__menuItem"><a href="{% url 'login' %}" class="login">
+          <li>
+            <a href="{% url 'login' %}" class="login">
               <img src="{% static 'images/login.png' %}" alt="icon">
-              <div>Войти</div></a></li>
+              <div>Войти</div>
+            </a>
+          </li>
             {% endif %}
-          </ul>
-        </nav>
-      </div>
+        </ul>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
