@@ -1,34 +1,35 @@
-let slides = document.querySelectorAll(".round");
+let slides = document.querySelectorAll(".program-group__el");
 let eat = document.querySelectorAll(".eat_flex");
 let prices = document.querySelector("#programTotal");
 
-
+// при клике на кол-во каллорий добавляем класс: active
 function clear(){
     for(let i = 0; i < slides.length; i++) {
         slides[i].addEventListener('click', () => {
-            clearActiveClasses()
+            clearActiveClasses() // вызов функции удаления класса
             slides[i].classList.add('active')
         });
     }
 }
-
+// при клике на кол-во каллорий удаляем класс active у всех остальных каллорий
 function clearActiveClasses(){
     for(let i = 0; i< slides.length; i++) {
         slides[i].classList.remove('active');
     }
 }
 
-clear()
+clear() // вызов функции
 
+// выводим блюда на экран по каллориям (при клике вызывается функция)
 function light(){
     for(let i = 0; i < eat.length; i++) {
-        eat[i].classList.add('eatnone2')
+        eat[i].classList.add('eatnone2')  // добавляем всем класс для скрытия объектов
         }
     let li = document.querySelectorAll(".lightx")
     for(let j = 0; j < li.length; j++) {
-        li[j].classList.remove('eatnone2')
+        li[j].classList.remove('eatnone2') // удаляем класс у нужного нам элемента для его отображения
     }
-    prices.textContent = 850;
+    prices.textContent = 850;  // добавляем стоимость блюд
 }
 
 function normal(){
@@ -75,13 +76,16 @@ function super1(){
     prices.textContent = 1350;
 }
 
-let food = document.querySelectorAll(".foodflex");
-let column = document.querySelectorAll(".f-column");
 
+// добавляем функционал для выбора блюд по дням недели
+let food = document.querySelectorAll(".foodflex"); // получаем доступ для отображения блюд по дням недели
+let column = document.querySelectorAll(".f-column"); // получаем доступ для активности выбранного дня недели на панеле
+
+// при клике на день недели добавляем класс: active_two
 function cleartwo(){
     for(let i = 0; i < column.length; i++) {
         column[i].addEventListener('click', () => {
-            clearActiveClassestwo()
+            clearActiveClassestwo()  // вызов функции удаления класса
             column[i].classList.add('active_two')
         });
     }
@@ -93,8 +97,9 @@ function clearActiveClassestwo(){
     }
 }
 
-cleartwo()
+cleartwo()  // вызов самой функции
 
+// вызов функций при клике по дням недели
 function monday(){
     for(let i = 0; i < food.length; i++) {
         food[i].classList.add('eatnone')

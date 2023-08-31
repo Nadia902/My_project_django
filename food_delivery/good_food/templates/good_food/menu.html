@@ -1,7 +1,7 @@
 <div class="wrap">
     <div class="program-group-wrap" id="result">
         <div>
-            <div class="program-group active" data-programtype="weightLoss">
+            <div class="program-group active">
                 <div onclick="light()" class="program-group__el active">
                     <div class="program-group__el-val">1100 - 1500 Ккал</div>
                 </div>
@@ -20,37 +20,35 @@
             </div>
         </div>
     </div>
-    <div class="f f-between mb-40 fw gap-20 lg__f-column">
-        <div class="mr-a lg__mr-init lg__w100" data-test="dayList">
-            <div class="schedule-list g g-afc g-gap-8">
-                <div onclick="monday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select active_two" data-day="1" data-week="2">
-                    <div class="type--w700 mb-5">Пн</div>
-                </div>
-                <div onclick="tuesday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="2" data-week="2">
-                    <div class="type--w700 mb-5">Вт</div>
-                </div>
-                <div onclick="wednesday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="3" data-week="2">
-                    <div class="type--w700 mb-5">Ср</div>
-                </div>
-                <div onclick="thursday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="4" data-week="2">
-                    <div class="type--w700 mb-5">Чт</div>
-                </div>
-                <div onclick="friday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="5" data-week="2">
-                    <div class="type--w700 mb-5">Пт</div>
-                </div>
-                <div onclick="saturday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="6" data-week="2">
-                    <div class="type--w700 mb-5">Сб</div>
-                </div>
-                <div onclick="sunday()" class="schedule-list__el f f-column f-aic psv-16 psh-12 br-8 bor bor--border bor-h--mark tr cp lg__f-grow js-tick js-menu-day-select  " data-day="7" data-week="2">
-                    <div class="type--w700 mb-5">Вс</div>
-                </div>
+    <div class="font weekday">
+        <div class="weekday_flex">
+            <div onclick="monday()" class="font f-column active_two">
+                <div class="type--w700">Пн</div>
+            </div>
+            <div onclick="tuesday()" class="font f-column">
+                <div class="type--w700">Вт</div>
+            </div>
+            <div onclick="wednesday()" class="font f-column">
+                <div class="type--w700">Ср</div>
+            </div>
+            <div onclick="thursday()" class="font f-column">
+                <div class="type--w700">Чт</div>
+            </div>
+            <div onclick="friday()" class="font f-column">
+                <div class="type--w700">Пт</div>
+            </div>
+            <div onclick="saturday()" class="font f-column">
+                <div class="type--w700">Сб</div>
+            </div>
+            <div onclick="sunday()" class="font f-column">
+                <div class="type--w700">Вс</div>
             </div>
         </div>
     </div>
 </div>
 <div class="eat">
     <div class="wrap">
-        <div class="text_about">
+        <div>
             <p class="text_result">Результат достигается за счет высокого содержания белков,
                 оптимального количества полезных жиров и меньшего количества углеводов
                 (причем углеводы присутствуют в основном в первой половине дня). Общий
@@ -80,33 +78,30 @@
                 {% include 'good_food/eat.html' %}
                 {% endfor %}
             </div>
-            <div class="row align-items-center cbfix">
-                <div class="col-sm-7 col-md-8 col-lg-6 col-block">
-                    <div class="program-total__info fz90 align-items-center xs-up-1 sm-up-1 md-up-2">
-                        <div class="col col-block order-md-1">
+            <div class="row">
+                <div>
+                    <div class="fz90">
+                        <div>
                             <p>Ваше кол-во калорий: <b><span id="programCal">{{ control }}</span>ккал</b></p>
                         </div>
-                        <div class="col col-block order-md-2">
-                            <div class="d-flex align-items-center">
-                                <span class="mr-2 mr-sm-3 spn-info">Кол-во дней:</span>
-                                <select class="custom-select2 w-auto font-weight-bold" name="programdays"
-                                            id="programdays">
-                                    <option value="1" selected="" data-id="1d">1 день</option>
-                                    <option value="7" data-id="7d">7 дней</option>
-                                    <option value="21" data-id="21d">21 дней</option>
-                                </select>
-                            </div>
+                        <div>
+                            <span>Кол-во дней:</span>
+                            <select class="custom-select2" name="programdays" id="programdays">
+                                <option value="1" selected="">1 день</option>
+                                <option value="7">7 дней</option>
+                                <option value="21">21 дней</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-4 col-lg-3 text-center col-block">
-                    <div class="program-total__price fz90">&nbsp;Цена: <span class="text-primary font-weight-bold h1 mb-0 big">
-                        <span id="programTotal">850</span>₽</span>
+                <div class="col-sm-5">
+                    <div class="program-total__price fz90">&nbsp;Цена:
+                        <span><span id="programTotal">850</span>₽</span>
                         <span>/день</span>
                     </div>
-                    <div class="col-lg-3 text-center col-block">
+                    <div>
                         <a href="{% url 'orders' %}">
-                            <button type="submit" class="btn btn-secondary">Заказать рацион</button>
+                            <button type="submit" class="btn">Заказать рацион</button>
                         </a>
                     </div>
                 </div>

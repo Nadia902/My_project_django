@@ -15,7 +15,16 @@ body{
       margin: 0 auto;
 }
 
-/*========== Меню ==========*/
+div {
+    display: block;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+/*========== navbar ==========*/
 
 .header {
       width: 100%;
@@ -63,7 +72,7 @@ a {
     font-weight:bold;
 }
 
-/*========== Меню с кнопкой ==========*/
+/*========== navbar_back ==========*/
 
 .icon_back {
     width: 60px;
@@ -72,7 +81,7 @@ a {
     margin-right: 10px;
 }
 
-/*========== Основная страница ==========*/
+/*========== projects ==========*/
 
 .back {
     background-image: url('../images/back2.jpg');
@@ -281,7 +290,7 @@ a {
     color: #9B9486;
 }
 
-/*========== Калькулятор ==========*/
+/*========== calculator ==========*/
 
 .back_two {
     margin-top: 120px;
@@ -339,20 +348,22 @@ a {
 
 .form-control {
     height: 2.875rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0.3rem;
+    border-radius: 0.25rem;
     display: block;
     width: 100%;
     font-weight: 400;
-    color: #000;
+    color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #1e988f;
+    border: 1px solid #ced4da;
     margin: 0;
     font-family: inherit;
     padding: 0 1.5rem 0 0.8rem;
+    transition: border-color .15s
 }
 
 .calc-form__info {
@@ -363,7 +374,19 @@ a {
     text-align: center!important;
 }
 
-/*========= Наборы для заказа ==========*/
+/*========= menu ==========*/
+
+.program-group__el-val {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    grid-column-gap: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    padding: 8.5px 10px 4.5px 10px;
+}
 
 .program-group-wrap {
     border-bottom: 1px solid #dcdfe8;
@@ -396,96 +419,52 @@ a {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-form {
-    display: block;
-    margin-top: 0em;
-}
-
-div {
-    display: block;
-}
-
-.program-group__el-val {
-    display: flex;
-    flex-wrap: wrap;
-    white-space: nowrap;
-    grid-column-gap: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    color: black;
-    font-weight: bold;
-    padding: 8.5px 10px 4.5px 10px;
-}
-
-.f {
+.font {
     display: flex;
 }
-.f, .icon-row {
+
+.font, .icon-row {
     display: -webkit-flex;
     display: -ms-flexbox;
 }
-.mb-40 {
+
+.weekday {
     margin-bottom: 40px;
 }
-.g-afc {
-    grid-auto-flow: column;
-}
-.g {
+
+.weekday_flex {
     display: grid;
-}
-.g-gap-8 {
+    grid-auto-flow: column;
     grid-gap: 8px;
 }
-.schedule-list__el.active_two {
+
+.f-column.active_two {
     background: #7eca1d;
     color: #fff;
 }
-.bor {
-    border-width: 1px;
-}
-.br-8 {
-    border-radius: 8px;
-}
-.bor, .bor-b, .bor-t {
-    border-style: solid;
-}
-.bor--border {
-    border-color: #dcdfe8;
-}
+
 .f-column {
     flex-direction: column;
     cursor: pointer;
-}
-.f-aic {
     align-items: center;
-}
-.f-aic, .f-mid {
     -webkit-align-items: center;
-}
-.psh-12 {
-    padding-left: 12px;
-    padding-right: 12px;
-}
-.psv-16 {
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dcdfe8;
 }
-.blog-el__title, .coach-descr__title, .coach-descr__val, .coach-history__title, .invite-title, .review-item__name, .type--w700 {
+
+.review-item__name{
     font-weight: 700;
 }
-.mb-5 {
+
+.type--w700 {
     margin-bottom: 5px;
-}
-.blog-el-footer, .drop-menu-card__text, .drop-menu__el-title, .dropdown-title, .invite-msg span, .program-coast__title, .program-consist__el-type, .program-el__head, .program-el__text, .rating--msg, .ration__info, .review-item__footer, .type--sm {
-    font-size: 12px;
+    font-weight: 700;
 }
 
 .eat {
@@ -495,12 +474,73 @@ div {
     padding: 10px 0 50px;
     margin-bottom: 130px;
 }
- .icon2 {
-    width: 280px;
-    height: 180px;
-    }
 
- .food_collection {
+.text_result{
+    margin-bottom: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.eat_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+.fz90 {
+    font-size: 1.25rem;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.custom-select2 {
+    font-size: 1.25rem;
+    display: inline-block;
+    padding: 0rem 0 0.6rem 0.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    vertical-align: middle;
+    background: #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center/8px 10px no-repeat;
+    border: 1px solid #1e988f;
+    border-radius: 0.25rem;
+    word-wrap: normal;
+    font-family: inherit;
+}
+
+.col-sm-5 {
+    padding-top: 21px;
+    margin-left: 35px;
+}
+
+.program-total__price {
+    text-align: center;
+}
+
+.eatnone {
+    display: none;
+}
+
+.eatnone2 {
+    display: none;
+}
+
+/*========= eat  ==========*/
+
+.food_collection {
     border: 1px solid #dcdfe8;
     transition: all .4s;
     display: flex;
@@ -516,110 +556,27 @@ div {
     flex-wrap: wrap;
     width: 300px;
     margin-bottom: 15px;
- }
- .eat_flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: stretch;
- }
- .text_result{
-    margin-bottom: 30px;
-    font-size: 22px;
-    text-align: center;
- }
- .productitem-title{
+}
+
+.productitem-title{
     margin: 12px;
     font-weight: 700!important;
     text-align: center!important;
     font-size: 1.25rem;
- }
- .row {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: stretch;
- }
- .col-sm-5 {
-    padding-top: 21px;
-    margin-left: 35px;
- }
- .program-total__price {
-    text-align: center;
- }
- .custom-select2 {
-    font-size: 1.25rem;
-    display: inline-block;
-    padding: 0rem 0 0.6rem 0.1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #000;
-    vertical-align: middle;
-    background: #fff url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e) right 0.75rem center/8px 10px no-repeat;
-    border: 1px solid #1e988f;
-    border-radius: 0.25rem;
-    word-wrap: normal;
-    font-family: inherit;
-}
-.eatnone {
-    display: none;
-}
-.eatnone2 {
-    display: none;
-}
-.fz90 {
-    font-size: 1.25rem;
-    display: inline-block;
-    margin-bottom: 16px;
 }
 
-
-
-
-#map {
-    position: relative;
-    height: 845px;
-    padding: 0;
-    display: block;
-}
-.map {
-    width: 100%;
-    height: 845px;
-    overflow-x: hidden;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    overflow-y: hidden;
+.icon2 {
+    width: 280px;
+    height: 180px;
 }
 
+/*========= neworder  ==========*/
 
-.map:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: -webkit-linear-gradient(bottom,rgba(255,255,255,.96) 3%,
-    rgba(255,255,255,.3) 88%,rgba(255,255,255,.96) 99%);
+.class_form {
+  text-align: center;
+  padding-bottom: 7%;
 }
 
-.telebot_order {
-    padding-top: 300px;
-}
 .text-3 {
   color: #155724;
   font-size: 2em;
@@ -628,110 +585,65 @@ div {
   margin-top: 0;
 }
 
-.product_card {
-	margin: 10px;
+.justify-content-center {
+    justify-content: center!important;
 }
 
-.table_one {
-	font-size: 1.4em;
+.col-sm-2 {
+    padding-bottom: 10px;
+    font-weight:bold;
+    font-size: 22px;
 }
 
-.class_form {
-  text-align: center;
-  padding-bottom: 7%;
-}
-.logo-bottom {
-  margin: 0 0 5px;
-}
+/*========= thanks page  ==========*/
+
 .thank{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: calc(100vh - 162px);
 }
-/*разде*/
 
-.justify-content-center {
-    justify-content: center!important;
+/*========= comments  ==========*/
+
+.commentType {
+    background-image: url('../images/comment.jpg');
+    background-size: cover;
+    background-position: center center;
+    padding: 200px 0 160px;
 }
 
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: 120px;
-    margin-left: 120px;
+.wrapnew{
+    box-sizing: border-box;
+    max-width: 1110px;
+    padding-left: 200px;
+    padding-right: 200px;
+    min-width: 414px;
+    margin: 0 auto;
+    text-align: center;
 }
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color .15s
- }
- .col-sm-2 {
-    padding-bottom: 10px;
-    font-weight:bold;
-    font-size: 22px;
- }
- .commentType {
-      background-image: url('../images/comment.jpg');
-      background-size: cover;
-      background-position: center center;
-      padding: 200px 0 160px;
- }
- .containerType{
+
+.containerType{
     border-radius: 12px;
     overflow: hidden;
     background: #d6f5f4;
     padding: 25px;
     text-align: center;
- }
- .wrapnew{
-      box-sizing: border-box;
-      max-width: 1110px;
-      padding-left: 200px;
-      padding-right: 200px;
-      min-width: 414px;
-      margin: 0 auto;
-      text-align: center;
- }
- .btn--mark, .modal-send, .page-error__getпоп {
-    color: rgb(255, 255, 255);
-    background: rgb(126, 202, 29);
-}
-.btn--md, .modal-send, .page-error__get {
-    margin-top: 35px;
-    font-weight: 700;
-    padding: 17px 48px;
-    display: inline-block;
-    position: relative;
-    border-radius: 32px;
-    transition: all 0.4s ease 0s;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    font-size: 20px;
-    cursor: pointer;
 }
 
 .section--gradient {
     background: linear-gradient(98.95deg,#e3eeff 0,#e4f6e4 52.6%,#ffeee4 100%);
     padding:10px;
 }
+
+.comment:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 .review-item {
     margin-bottom: 48px;
 }
+
 .review-item__name {
     margin-bottom: 16px;
     font-size: 20px;
@@ -746,10 +658,22 @@ div {
 .review-item__footer {
     padding-top: 16px;
 }
-.program-el__footer, .program-register-row, .review-item__footer, .share {
-    border-top: 1px solid #9fabb7;
-    font-size: 12px;
+
+.reg_coomments {
+    color: #1e988f;
 }
+
+.containerType_bootom{
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+
+/*========= login/register  ==========*/
+
 .auth {
   width: 100%;
   position: relative;
@@ -825,113 +749,53 @@ div {
   font-size: 2rem;
   font-weight: 500;
 }
-/*=======================
-  Single Message
-========================*/
 
-.messagePage .message {
-  list-style: none;
-  background: var(--color-white);
-  padding: 3.5rem 5rem;
-  border: 2px solid var(--color-light);
-  border-radius: 0.7rem;
+#map {
+    position: relative;
+    height: 845px;
+    padding: 0;
+    display: block;
 }
 
-.messagePage .message__subject {
-  font-size: 2.8rem;
-  color: var(--color-sub);
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+.map {
+    width: 100%;
+    height: 845px;
+    overflow-x: hidden;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    overflow-y: hidden;
 }
 
-.messagePage .message__author {
-  font-size: 1.8rem;
-  font-weight: 500;
+.map:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: -webkit-linear-gradient(bottom,rgba(255,255,255,.96) 3%,
+    rgba(255,255,255,.3) 88%,rgba(255,255,255,.96) 99%);
 }
 
-.messagePage .message__date {
-  font-size: 1.4rem;
-  font-weight: 400;
-  text-align: left;
-  margin-bottom: 3rem;
-}
-
-.backButton {
-  background: var(--color-main-light);
-  color: var(--color-main);
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.backButton i {
-  font-size: 1.8rem;
-}
-
-
-/*=======================
-  Form Page
-========================*/
-
-.formPage .formWrapper {
-  list-style: none;
-  background: var(--color-white);
-  padding: 3.5rem 5rem;
-  border: 2px solid var(--color-light);
-  border-radius: 0.7rem;
-}
-
-.formPage .formWrapper__subject {
-  font-size: 2.8rem;
-  color: var(--color-sub);
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-}
-/*========== Comments ==========*/
-
-.comments {
-  margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 2px solid var(--color-light);
-}
-
-.comments .form label {
-  /*position: absolute;
-  margin: -9999px;*/
-}
-
-.commentList {
-  margin: 3rem 0;
-}
-
-.comment:not(:last-child) {
-  margin-bottom: 3rem;
-}
-
-.comment__author {
-  font-size: 1.8rem;
-}
-
-.comment__info {
-  font-size: 1.45rem;
-}
+/*========= pagination  ==========*/
 
 .pagination{
     margin-bottom: 35px;
 }
-.reg_coomments {
-    color: #1e988f;
-}
- .containerType_bootom{
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    padding: 25px;
-    text-align: center;
- }
+
  .pointer_num{
     font-size: 25px;
     font-weight: bold;
