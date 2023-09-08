@@ -16,7 +16,7 @@ class ProfileForm(ModelForm):
             field.widget.attrs.update({'class': 'input'})
 
 
-class CustomUserCreationForm(UserCreationForm):
+class CustomUserCreationForm(UserCreationForm):  # поля из формы для регистрации нового пользователя
     class Meta:
         model = User
         fields = ['first_name', 'email', 'username', 'password1', 'password2']

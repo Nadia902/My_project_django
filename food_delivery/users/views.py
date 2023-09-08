@@ -5,11 +5,9 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 from .forms import CustomUserCreationForm
-from django.contrib.auth.decorators import login_required
-# from .utils import search_profiles, paginate_profiles
 
 
-def login_user(request):
+def login_user(request):  # функция авторизации пользователя
     if request.user.is_authenticated:
         return redirect('projects')
 
@@ -33,13 +31,13 @@ def login_user(request):
     return render(request, 'users/login_register.html')
 
 
-def logout_user(request):
+def logout_user(request):  # функция выхода из профиля пользователя
     logout(request)
     messages.info(request, 'Пользователь был разлогинен!')
     return redirect('login')
 
 
-def register_user(request):
+def register_user(request):  # функция для регистрации пользователя
     page = 'register'
     form = CustomUserCreationForm()
 

@@ -98,12 +98,3 @@ class CommentCrm(models.Model):
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
 
-
-# class Review(models.Model):   комментарии
-#     owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
-#     body = models.TextField(blank=True, null=True)
-#     created = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return self.body
-

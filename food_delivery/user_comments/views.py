@@ -14,10 +14,10 @@ def project(request):
     new_comment = None
     if request.method == 'POST':  # Комментарий был опубликован
         comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():  # Создайте объект Comment, но пока не сохраняйте в базу данных
-            new_comment = comment_form.save(commit=False)  # Назначить текущий пост комментарию
-            new_comment.post = post  # Сохранить комментарий в базе данных
-            new_comment.save()
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)  # Создаем объект Comment, но пока не сохраняем в базу данных
+            new_comment.post = post  # Назначить текущий пост комментарию
+            new_comment.save()  # Сохранить комментарий в базе данных
     else:
         comment_form = CommentForm()
     try:
@@ -36,4 +36,3 @@ def project(request):
                    'posts': posts,
                    'pages': pages,
                    'comment_form': comment_form})
-
