@@ -8,11 +8,11 @@
       </a>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a href='#result'>Меню</a></li>
-          <li><a href="#calculator_text">Калькулятор</a></li>
-          <li><a href="#about_good">О нас</a></li>
+          <li><a href="{% url 'projects' %}#result">Меню</a></li>
+          <li><a href="{% url 'projects' %}#programm">Калькулятор</a></li>
+          <li><a href="{% url 'projects' %}#about_good">О нас</a></li>
           <li><a href="{% url 'project' %}">Отзывы</a></li>
-          <li><a href="#bx_719294866_29">Доставка</a></li>
+          <li><a href="{% url 'projects' %}#bx_719294866_29">Доставка</a></li>
             {% if request.user.is_authenticated %}
           <li>
             <a href="{% url 'logout' %}" class="login">

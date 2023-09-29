@@ -130,7 +130,7 @@ a {
 }
 
 .center {
-    padding: 80px 0px 0 0px;
+    padding: 20px 0px 0 0px;
     display: block;
     box-sizing: inherit;
     text-align: center;
@@ -390,7 +390,7 @@ a {
 
 .program-group-wrap {
     border-bottom: 1px solid #dcdfe8;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     margin-top: 32px;
     }
 
@@ -429,7 +429,7 @@ a {
 }
 
 .weekday {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .weekday_flex {
@@ -460,6 +460,7 @@ a {
 
 .review-item__name{
     font-weight: 700;
+    text-align: left;
 }
 
 .type--w700 {
@@ -471,13 +472,20 @@ a {
     background-image: url('../images/fon.jpg');
     background-size: cover;
     background-position: center center;
-    padding: 10px 0 50px;
+    padding: 0px 0 50px;
     margin-bottom: 130px;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0px 0px 31px 37px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 31px 37px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 31px 37px rgba(255,255,255,1);
 }
 
 .text_result{
     margin-bottom: 30px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -489,15 +497,13 @@ a {
 }
 
 .row {
-    margin-top: 15px;
+    margin-top: 15px 120px 15px;
     display: flex;
     justify-content: center;
     align-items: stretch;
     display: -ms-flexbox;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: 120px;
-    margin-left: 120px;
 }
 
 .fz90 {
@@ -629,6 +635,7 @@ a {
     background: #d6f5f4;
     padding: 25px;
     text-align: center;
+    font-size: 20px;
 }
 
 .section--gradient {
@@ -653,10 +660,18 @@ a {
 .review-item__info {
     margin-bottom: 16px;
     box-sizing: inherit;
-    text-align: justify;;
+    text-align: justify;
+    color: #646671;
 }
 .review-item__footer {
     padding-top: 16px;
+    border-top: 1px solid #adb0b9;
+}
+
+.review-item__date {
+    text-align: left;
+    font-size: 12px;
+    color: #646671;
 }
 
 .reg_coomments {
@@ -794,6 +809,7 @@ a {
 
 .pagination{
     margin-bottom: 35px;
+    font-size: 25px;
 }
 
  .pointer_num{

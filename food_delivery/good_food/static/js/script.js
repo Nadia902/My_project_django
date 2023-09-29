@@ -160,3 +160,4 @@ function sunday(){
         d[j].classList.remove('eatnone')
     }
 }
+

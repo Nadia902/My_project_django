@@ -49,36 +49,7 @@
 <div class="eat">
     <div class="wrap">
         <div>
-            <p class="text_result">Результат достигается за счет высокого содержания белков,
-                оптимального количества полезных жиров и меньшего количества углеводов
-                (причем углеводы присутствуют в основном в первой половине дня). Общий
-                калораж рассчитывается индивидуально.</p>
-            <div class="eat_flex lightx">
-                {% for lightes in prof_light %}
-                {% include 'good_food/eat.html' %}
-                {% endfor %}
-            </div>
-            <div class="eat_flex normalx eatnone2">
-                {% for lightes in prof_normal %}
-                {% include 'good_food/eat.html' %}
-                {% endfor %}
-            </div>
-            <div class="eat_flex strongx eatnone2">
-                {% for lightes in prof_strong %}
-                {% include 'good_food/eat.html' %}
-                {% endfor %}
-            </div>
-            <div class="eat_flex superstrongx eatnone2">
-                {% for lightes in prof_superstrong %}
-                {% include 'good_food/eat.html' %}
-                {% endfor %}
-            </div>
-            <div class="eat_flex superx eatnone2">
-                {% for lightes in prof_super %}
-                {% include 'good_food/eat.html' %}
-                {% endfor %}
-            </div>
-            <div class="row">
+             <div class="row">
                 <div>
                     <div class="fz90">
                         <div>
@@ -106,6 +77,35 @@
                     </div>
                 </div>
             </div>
+            <div class="eat_flex lightx">
+                {% for lightes in prof_light %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex normalx eatnone2">
+                {% for lightes in prof_normal %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex strongx eatnone2">
+                {% for lightes in prof_strong %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex superstrongx eatnone2">
+                {% for lightes in prof_superstrong %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <div class="eat_flex superx eatnone2">
+                {% for lightes in prof_super %}
+                {% include 'good_food/eat.html' %}
+                {% endfor %}
+            </div>
+            <p class="text_result">Результат достигается за счет высокого содержания белков,
+                оптимального количества полезных жиров и меньшего количества углеводов
+                (причем углеводы присутствуют в основном в первой половине дня). Общий
+                калораж рассчитывается индивидуально<span id="calorries">.</span></p>
         </div>
     </div>
 </div>

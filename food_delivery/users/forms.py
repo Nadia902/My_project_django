@@ -20,7 +20,7 @@ class CustomUserCreationForm(UserCreationForm):  # поля из формы дл
     class Meta:
         model = User
         fields = ['first_name', 'email', 'username', 'password1', 'password2']
-        labels = {'first_name': 'Name'}
+        labels = {'first_name': 'Логин'}
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

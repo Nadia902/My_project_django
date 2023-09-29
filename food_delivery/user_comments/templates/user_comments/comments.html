@@ -2,7 +2,7 @@
 {% load static %}
 {% block comm %}
 
-{% include 'good_food/navbar_back.html' %}
+{% include 'good_food/navbar.html' %}
     {% for one_post in posts %}
     <div class="commentType">
         <div class="wrapnew">
@@ -18,7 +18,7 @@
                 <h1> Отзывы о доставке готовой еды</h1>
                 {% with comments.count as total_comments %}
                     <h2>
-                        {{ total_comments }} comment{{ total_comments|pluralize }}
+                        Всего комментариев: {{ total_comments }}
                     </h2>
                 {% endwith %}
                 {% for comment in pages %}

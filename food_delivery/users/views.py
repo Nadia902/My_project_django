@@ -9,7 +9,7 @@ from .forms import CustomUserCreationForm
 
 def login_user(request):  # функция авторизации пользователя
     if request.user.is_authenticated:
-        return redirect('projects')
+        return redirect('project')
 
     if request.method == "POST":
         username = request.POST['username'].lower()
@@ -24,7 +24,7 @@ def login_user(request):  # функция авторизации пользов
 
         if user is not None:
             login(request, user)
-            return redirect('projects')
+            return redirect('project')
         else:
             messages.error(request, "Имя пользователя или пароль некорректны")
 
